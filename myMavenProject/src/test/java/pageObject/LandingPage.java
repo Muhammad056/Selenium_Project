@@ -10,11 +10,11 @@ public class LandingPage {
 	
 	By signUp=By.id("u_0_u");
 	By Title=By.xpath("//h2[@class='mbs _3ma _6n _6s _6v']");
-	// test
+	By SubTitle = By.xpath("//div[@class='mbl _3m9 _6o _6s _mf']");
 
 	public LandingPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
-		this.driver=driver; // new braches aqib test
+		this.driver=driver; 
 	}
 
 
@@ -28,6 +28,11 @@ public class LandingPage {
 	public WebElement getTtile()
 	{
 		return driver.findElement(Title);
+		
+	}
+	public WebElement getSubTitle()
+	{
+		return driver.findElement(SubTitle);
 		
 	}
 }
