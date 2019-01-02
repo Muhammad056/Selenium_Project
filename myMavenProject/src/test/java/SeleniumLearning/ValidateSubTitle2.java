@@ -20,6 +20,7 @@ public class ValidateSubTitle2 extends base {
 		driver.get("https://www.facebook.com/");
 		LandingPage login= new LandingPage(driver);
 		Assert.assertTrue(login.getSubTitle().isDisplayed());
+		// pass workv
 		driver.quit();
 		
 	}

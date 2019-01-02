@@ -16,7 +16,7 @@ public class base {
 	public WebDriver  initializeDriver() throws IOException
 	{
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\Aqib\\Desktop\\Selenium_project\\myMavenProject\\src\\main\\java\\SeleniumLearning\\data.Properties");
+		FileInputStream fis = new FileInputStream("C:\\Users\\Aqib\\Desktop\\Selenium_Framework\\myMavenProject\\src\\main\\java\\SeleniumLearning\\data.Properties");
 		
 		prop.load(fis);
 		String browerName=prop.getProperty("browser");
