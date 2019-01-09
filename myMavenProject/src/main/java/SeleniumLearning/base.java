@@ -11,11 +11,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class base {
-	static WebDriver driver; 
-	
+	public WebDriver driver; 
+	public Properties prop;
 	public WebDriver  initializeDriver() throws IOException
 	{
-		Properties prop = new Properties();
+		 prop = new Properties();
 		FileInputStream fis = new FileInputStream("C:\\Users\\Aqib\\Desktop\\Selenium_Framework\\myMavenProject\\src\\main\\java\\SeleniumLearning\\data.Properties");
 		
 		prop.load(fis);

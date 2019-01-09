@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -12,17 +14,25 @@ import pageObject.LoginPage;
 
 public class ValidateSubTitle2 extends base {
 
+	@BeforeTest()
+	public void intializaDriver() throws IOException {
+		driver=initializeDriver(); 
+		driver.get(prop.getProperty("url"));
+	}
 	
 	@Test()
-	public void basePageNavigtion() throws IOException, InterruptedException
+	public void basePageNavigtion2() throws IOException, InterruptedException
 	{
-		driver=initializeDriver(); 
-		driver.get("https://www.facebook.com/");
 		LandingPage login= new LandingPage(driver);
 		Assert.assertTrue(login.getSubTitle().isDisplayed());
 		// pass workv
-		driver.quit();
 		
+	}
+	
+	@AfterTest()
+	public void teardown()
+	{
+		driver.quit();
 	}
 	
 
